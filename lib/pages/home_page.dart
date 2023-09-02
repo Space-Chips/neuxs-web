@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const ProfilePage(),
+        builder: (context) => ProfilePage(),
       ),
     );
   }

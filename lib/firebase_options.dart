@@ -56,7 +56,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyA2X6-FGF2xISeCkGD1xzKFg9r6VIjJH4g',
-    appId: '1:8175006174:android:8714a7f3493ecdf3b1ed4f',
+    appId: '1:8175006174:android:39bb96e7a6a3c340b1ed4f',
     messagingSenderId: '8175006174',
     projectId: 'nexus-v03',
     storageBucket: 'nexus-v03.appspot.com',
@@ -64,13 +64,13 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAg4IEV_CsAfoEilUX5TyWJcvgSTscRK24',
-    appId: '1:8175006174:ios:417840833d0b6ffeb1ed4f',
+    appId: '1:8175006174:ios:9aa64ba808c8ffb1b1ed4f',
     messagingSenderId: '8175006174',
     projectId: 'nexus-v03',
     storageBucket: 'nexus-v03.appspot.com',
     iosClientId:
-        '8175006174-1qc9qd9t5uq7utgnc8c41c5m8i4smd3p.apps.googleusercontent.com',
-    iosBundleId: 'com.nexuslink.linkup',
+        '8175006174-mb4qdq1qr5sdj446vs9rr5sec1396tjr.apps.googleusercontent.com',
+    iosBundleId: 'com.nexuslinkid.linkup',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
