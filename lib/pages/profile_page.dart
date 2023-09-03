@@ -231,7 +231,6 @@ class _ProfilePageState extends State<ProfilePage> {
                             "Delete your account data",
                             style: TextStyle(
                               color: Colors.grey[500],
-                              fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),
                           ),

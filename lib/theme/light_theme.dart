@@ -16,4 +16,11 @@ ThemeData lightTheme = ThemeData(
   textButtonTheme: TextButtonThemeData(
     style: TextButton.styleFrom(foregroundColor: Colors.blue),
   ),
+  textSelectionTheme: const TextSelectionThemeData(
+    cursorColor: Colors.blue, // Text selection handle color
+    selectionColor:
+        Color.fromARGB(112, 63, 169, 255), // Text selection background color
+    selectionHandleColor:
+        Color.fromARGB(112, 63, 169, 255), // Text selection handle color
+  ),
 );
