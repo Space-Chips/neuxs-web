@@ -1,11 +1,11 @@
 {
-    "name": "nexus",
-    "short_name": "nexus",
+    "name": "NEXUS",
+    "short_name": "NEXUS",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#d6d6d6",
+    "theme_color": "#d6d6d6",
+    "description": "The Gen Z social network",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
