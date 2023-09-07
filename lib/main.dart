@@ -6,6 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:nexus/auth/auth.dart';
 import 'package:nexus/auth/login_or_register.dart';
+import 'package:nexus/pages/home_page.dart';
 import 'package:nexus/pages/profile_page.dart';
 import 'package:nexus/theme/dark_theme.dart';
 import 'package:nexus/theme/light_theme.dart';

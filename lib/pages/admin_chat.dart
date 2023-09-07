@@ -94,6 +94,7 @@ class _HomePageState extends State<AdminChatPage> {
           "A D M I N  C H A T",
           selectionColor: Theme.of(context).colorScheme.primary,
         ),
+        centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.background,
         elevation: 0,
         actions: [

@@ -1439,6 +1439,9 @@ string fallback_menu_item_share_link
 string native_body
 string native_headline
 string native_media_view
+string notifications_permission_confirm
+string notifications_permission_decline
+string notifications_permission_title
 string offline_notification_text
 string offline_notification_title
 string offline_opt_in_confirm
