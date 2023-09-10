@@ -47,6 +47,8 @@ dependencies:
   animations: ^2.0.8
   flutter_markdown: ^0.6.17+2
   google_mobile_ads: ^3.0.0
+  firebase_storage: ^11.2.6
+  image_picker: ^1.0.4
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.nexus.app-mergeDebugResources-22:/values-v26/values-v26.xml",
+            "outputFile": "com.example.nexus.app-mergeDebugResources-34:/values-v26/values-v26.xml",
             "map": [
                 {
                     "source": "/Users/abdelhaknezzari/.gradle/caches/transforms-3/1dd920f9d62753aa632ce37a9d889c82/transformed/appcompat-1.2.0/res/values-v26/values-v26.xml",

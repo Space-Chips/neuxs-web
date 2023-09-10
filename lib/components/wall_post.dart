@@ -46,6 +46,8 @@ class _WallPostState extends State<WallPost> {
   final reportTextController = TextEditingController();
   var commentTextcontrollerstring = "";
 
+  late String mediaUrl;
+
   @override
   void initState() {
     super.initState();
