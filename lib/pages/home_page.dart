@@ -272,47 +272,6 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            if (_selectedImageWidget != null)
-              _selectedImageWidget = Stack(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25.0),
-                          bottomLeft: Radius.circular(8.0),
-                          topRight: Radius.circular(25.0),
-                          bottomRight: Radius.circular(8.0),
-                        ),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25.0),
-                          bottomLeft: Radius.circular(8.0),
-                          topRight: Radius.circular(25.0),
-                          bottomRight: Radius.circular(8.0),
-                        ),
-                        child: _selectedImageWidget,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    top: 10.0, // Adjust the position as needed
-                    left: 10.0, // Adjust the position as needed
-                    child: IconButton(
-                      onPressed: () {
-                        print("closed");
-                        setState(() {
-                          _selectedImageWidget = Container();
-                          _photo = null; // Clear the selected photo
-                        });
-                      },
-                      icon: const Icon(Icons.close_rounded),
-                    ),
-                  ),
-                ],
-              ),
 
             // post message
             Padding(
@@ -343,6 +302,47 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(bottom: 25),
               child: Text("Logged in as : ${currentUser.email!}"),
             ),
+            if (_photo != null)
+              _selectedImageWidget = Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(25.0),
+                          bottomLeft: Radius.circular(25.0),
+                          topRight: Radius.circular(25.0),
+                          bottomRight: Radius.circular(25.0),
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(25.0),
+                          bottomLeft: Radius.circular(25.0),
+                          topRight: Radius.circular(25.0),
+                          bottomRight: Radius.circular(25.0),
+                        ),
+                        child: _selectedImageWidget,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: 10.0, // Adjust the position as needed
+                    left: 10.0, // Adjust the position as needed
+                    child: IconButton(
+                      onPressed: () {
+                        print("closed");
+                        setState(() {
+                          _selectedImageWidget = Container();
+                          _photo = null; // Clear the selected photo
+                        });
+                      },
+                      icon: const Icon(Icons.close_rounded),
+                    ),
+                  ),
+                ],
+              ),
           ],
         ),
       ),

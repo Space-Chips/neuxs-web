@@ -70,8 +70,10 @@ class _WallPostState extends State<WallPost> {
     if (widget.mediaDest != null) {
       const destination = 'files/';
       final ref = storage.ref().child("files/${widget.mediaDest}");
+
       try {
         final url = await ref.getDownloadURL();
+        print("UUUUUUUUUUURRRRRRRRRRRRRRRRRRRRRRRLLLLLLLLLLLLLLLLLL : $url");
         //final storageRef =FirebaseStorage.instance.ref(destination).child("media/");
         //final listResult = await storageRef.listAll();
 
