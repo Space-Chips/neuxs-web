@@ -90,9 +90,6 @@ class _HomePageState extends State<HomePage> {
 
         // Display the selected image
         _selectedImageWidget = Image.file(_photo!);
-
-        // Uncomment the following line to clear the selected image when a new one is selected
-        // _photo = null;
       } else {
         print('No image selected.');
       }
@@ -145,7 +142,7 @@ class _HomePageState extends State<HomePage> {
         'Message': textController.text,
         'isAdminPost': isAdminState,
         'TimeStamp': Timestamp.now(),
-        'MediaDestination': fileName != null ? 'media/$fileName' : null,
+        'MediaDestination': fileName != null ? 'media/$fileName' : '',
         'Likes': [],
       });
       textController.clear();
@@ -256,6 +253,7 @@ class _HomePageState extends State<HomePage> {
                           user: post['User'],
                           userEmail: post['UserEmail'],
                           isAdminPost: post['isAdminPost'],
+                          mediaDest: post['MediaDestination'],
                           postId: post.id,
                           likes: List<String>.from(post['Likes'] ?? []),
                           time: formatDate(post['TimeStamp']),
@@ -274,26 +272,46 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-
             if (_selectedImageWidget != null)
-              _selectedImageWidget = Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(25.0),
-                    bottomLeft: Radius.circular(2.0),
-                    topRight: Radius.circular(25.0),
-                    bottomRight: Radius.circular(2.0),
+              _selectedImageWidget = Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(25.0),
+                          bottomLeft: Radius.circular(8.0),
+                          topRight: Radius.circular(25.0),
+                          bottomRight: Radius.circular(8.0),
+                        ),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(25.0),
+                          bottomLeft: Radius.circular(8.0),
+                          topRight: Radius.circular(25.0),
+                          bottomRight: Radius.circular(8.0),
+                        ),
+                        child: _selectedImageWidget,
+                      ),
+                    ),
                   ),
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(25.0),
-                    bottomLeft: Radius.circular(2.0),
-                    topRight: Radius.circular(25.0),
-                    bottomRight: Radius.circular(2.0),
+                  Positioned(
+                    top: 10.0, // Adjust the position as needed
+                    left: 10.0, // Adjust the position as needed
+                    child: IconButton(
+                      onPressed: () {
+                        print("closed");
+                        setState(() {
+                          _selectedImageWidget = Container();
+                          _photo = null; // Clear the selected photo
+                        });
+                      },
+                      icon: const Icon(Icons.close_rounded),
+                    ),
                   ),
-                  child: _selectedImageWidget,
-                ),
+                ],
               ),
 
             // post message

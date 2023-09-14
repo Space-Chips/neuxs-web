@@ -1,4 +1,4 @@
-#Sun Sep 10 17:44:55 CEST 2023
+#Wed Sep 13 20:26:39 CEST 2023
 base.0=/Users/abdelhaknezzari/Desktop/neuxs-web/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 base.1=/Users/abdelhaknezzari/Desktop/neuxs-web/build/app/intermediates/dex/debug/mergeDexDebug/classes2.dex
 base.2=/Users/abdelhaknezzari/Desktop/neuxs-web/build/app/intermediates/dex/debug/mergeDexDebug/classes3.dex
