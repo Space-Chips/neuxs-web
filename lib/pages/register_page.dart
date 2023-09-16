@@ -48,6 +48,7 @@ class _RegisterPageState extends State<RegisterPage> {
         String email, int age) async {
       await FirebaseFirestore.instance.collection('users').add({
         'admin': false,
+        'address': "",
         'username': emailTextController.text.split('@')[0], // initial username
         'bio': 'Empty bio...', // initial empty bio
         'first name': firstName,

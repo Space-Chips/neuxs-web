@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
+// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages, library_prefixes
 
 import 'dart:io';
 
 import 'package:nexus/components/post_field.dart';
+import 'package:nexus/pages/profile_page.dart';
 import 'package:path/path.dart' as Path;
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -16,7 +17,6 @@ import 'package:nexus/components/wall_post.dart';
 import 'package:nexus/helper/helper_methods.dart';
 import 'package:nexus/pages/admin_chat.dart';
 import 'package:nexus/pages/livechat_page.dart';
-import 'package:nexus/pages/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
         // Display the selected image
         _selectedImageWidget = Image.file(_photo!);
       } else {
-        print('No image selected.');
+        //print('No image selected.');
       }
     });
   }
@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
         _photo = File(pickedFile.path);
         uploadFile();
       } else {
-        print('No image selected.');
+        //print('No image selected.');
       }
     });
   }
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
   Future uploadFile() async {
     if (_photo == null) return;
     final fileName = Path.basename(_photo!.path);
-    final destination = 'files/';
+    const destination = 'files/';
 
     try {
       final ref = firebase_storage.FirebaseStorage.instance
@@ -120,8 +120,7 @@ class _HomePageState extends State<HomePage> {
           .child('media/$fileName');
       await ref.putFile(_photo!);
     } catch (e) {
-      print('Error occurred while uploading file: $e');
-      // You can add more specific error handling here.
+      //print('Error occurred while uploading file: $e');
     }
   }
 
@@ -164,7 +163,9 @@ class _HomePageState extends State<HomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => ProfilePage(),
+        builder: (context) => ProfilePage(
+          username: "Steve Jobs",
+        ),
       ),
     );
   }
@@ -332,7 +333,7 @@ class _HomePageState extends State<HomePage> {
                     left: 10.0, // Adjust the position as needed
                     child: IconButton(
                       onPressed: () {
-                        print("closed");
+                        //print("closed");
                         setState(() {
                           _selectedImageWidget = Container();
                           _photo = null; // Clear the selected photo

@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 class MyTextBox extends StatelessWidget {
   final String text;
   final String sectionName;
-  final void Function()? onPressed;
   const MyTextBox({
     super.key,
     required this.text,
     required this.sectionName,
-    required this.onPressed,
   });
 
   @override
@@ -32,23 +30,16 @@ class MyTextBox extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 14),
             // section name
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // section name
                 Text(sectionName, style: TextStyle(color: Colors.grey[500])),
-
-                // edit button
-                IconButton(
-                  onPressed: onPressed,
-                  icon: Icon(
-                    Icons.settings,
-                    color: Colors.grey[500],
-                  ),
-                )
               ],
             ),
+            SizedBox(height: 10),
 
             // text
             Text(text),

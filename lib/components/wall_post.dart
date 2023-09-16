@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, use_build_context_synchronously, unnecessary_null_comparison
+// ignore_for_file: prefer_const_constructors, use_build_context_synchronously, unnecessary_null_comparison, avoid_print
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -68,12 +68,11 @@ class _WallPostState extends State<WallPost> {
 // Retrive media from firebase storage
   Future<void> getMediaUrl() async {
     if (widget.mediaDest != null) {
-      const destination = 'files/';
       final ref = storage.ref().child("files/${widget.mediaDest}");
 
       try {
         final url = await ref.getDownloadURL();
-        print("UUUUUUUUUUURRRRRRRRRRRRRRRRRRRRRRRLLLLLLLLLLLLLLLLLL : $url");
+
         //final storageRef =FirebaseStorage.instance.ref(destination).child("media/");
         //final listResult = await storageRef.listAll();
 
@@ -87,7 +86,7 @@ class _WallPostState extends State<WallPost> {
           mediaUrl = url;
         });
       } catch (e) {
-        print("Error fetching media URL: $e");
+        //print("Error fetching media URL: $e");
       }
     }
   }

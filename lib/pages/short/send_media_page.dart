@@ -1,8 +1,9 @@
+// ignore_for_file: depend_on_referenced_packages, library_prefixes
+
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:nexus/components/text_field.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:nexus/pages/home_page.dart';
@@ -29,7 +30,6 @@ class SendMediaPage extends StatefulWidget {
 class _SendMediaPageState extends State<SendMediaPage> {
   String userEmailFilter = ''; // Initialize filter string
   File? _photo;
-  final ImagePicker _picker = ImagePicker();
   Widget _selectedImageWidget = Container();
 
   // text controller
@@ -117,7 +117,7 @@ class _SendMediaPageState extends State<SendMediaPage> {
                       child: _selectedImageWidget,
                     ),
                   ),
-                  if (_selectedImageWidget != null)
+                  if (_photo != null)
                     Stack(
                       children: [
                         Padding(
