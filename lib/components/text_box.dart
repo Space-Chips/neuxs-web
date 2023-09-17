@@ -30,7 +30,7 @@ class MyTextBox extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 14),
+            const SizedBox(height: 14),
             // section name
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,7 +39,7 @@ class MyTextBox extends StatelessWidget {
                 Text(sectionName, style: TextStyle(color: Colors.grey[500])),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
 
             // text
             Text(text),
